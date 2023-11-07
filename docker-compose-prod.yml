@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  admin:
+    container_name: mw-mp-admin
+    image: makewebme/mw-mp-admin:latest
+    networks:
+      - mwnet
+    restart: unless-stopped
+
+networks:
+  mwnet:
+    name: mw-mp_mwnet
